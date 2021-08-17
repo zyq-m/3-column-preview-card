@@ -1,0 +1,100 @@
+@import 'globals';
+@import 'variables';
+
+main {
+    @include center-item;
+    flex-direction: column;
+
+    @media (min-width: 69em) {
+        height: 100vh;
+    }
+}
+
+.card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin: 5rem 1.7rem;
+    
+    @media (min-width: 69em) {
+        display: flex;
+        margin: 0;
+    }
+    
+    h1, p {
+        margin-top: 0;
+    }
+
+    &__bgcolor{
+        @include flex-column;
+        align-items: start;
+        width: 21.8rem;
+        padding: 3.6rem;
+
+        @media (min-width: 69em) {
+            max-width: 20.4rem;
+        }
+
+
+        &--orange{
+            background-color: $bOrange;
+        }
+
+        &--cyan{
+            background-color: $dCyan;
+        }
+
+        &--darkCyan{
+            background-color: $vdCyan;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 2.7rem;
+        max-width: 4.4rem;
+        height: auto;
+    }
+
+    &__heading {
+        margin-bottom: 2.4rem;
+        text-transform: uppercase;
+        font-size: 2.3rem;
+        font-family: 'Big Shoulders Display', cursive;
+        color: $grey;
+    }
+
+    &__para{
+        line-height: 1.7;
+        color: $white;
+        margin-bottom: 2rem;
+
+        @media (min-width: 69rem) {
+            margin-bottom: 6rem;
+        }
+    }
+
+    &__link{
+        text-decoration: none;
+        background-color: $grey;
+        border: 2px solid $grey;
+        padding: 1.2rem 2.3rem;
+        border-radius: 3rem;
+        transition: 400ms ease-in-out;
+
+        &:hover {
+            color: $grey;
+            background-color: transparent;
+        }
+
+        &--orange {
+            color: $bOrange;
+        }
+
+        &--cyan {
+            color: $dCyan;
+        }
+
+        &--darkCyan {
+            color: $vdCyan;
+        }
+    }
+}
